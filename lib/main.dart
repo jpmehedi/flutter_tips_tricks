@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:tips_tricks/tips_three.dart';
 import 'package:tips_tricks/tips_two.dart';
 
 void main() {
@@ -11,14 +10,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-       
-    //Device Orientation Mode Setting 
-    SystemChrome.setPreferredOrientations(
-      [
-        DeviceOrientation.portraitUp,
-        DeviceOrientation.portraitDown
-      ]
+
+
+
+   //StatusBarColor and SystemNavigationBar setting
+   
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+       statusBarColor: Colors.red,
+        statusBarIconBrightness: Brightness.light,
+       systemNavigationBarColor: Colors.red,
+       systemNavigationBarIconBrightness: Brightness.light,
+      ),
     );
+
 
     return MaterialApp(
       title: 'Flutter Demo',
@@ -26,7 +30,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:TipsThree()
+      home:TipsTwo()
     );
   }
 }

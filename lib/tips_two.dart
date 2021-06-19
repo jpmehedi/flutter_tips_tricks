@@ -10,8 +10,15 @@ class TipsTwo extends StatefulWidget {
 class _TipsTwoState extends State<TipsTwo> {
   @override
   Widget build(BuildContext context) {
+  
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.red,
+        backwardsCompatibility: false,
+        systemOverlayStyle: SystemUiOverlayStyle(
+          statusBarColor: Colors.red,
+          statusBarIconBrightness: Brightness.light
+        ),
         title: Text("Tips #2"),
       ),
       body: Center(
